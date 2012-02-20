@@ -62,6 +62,10 @@ grails.plugins.springsecurity.interceptUrlMap = [
 	'/**':               ['IS_AUTHENTICATED_ANONYMOUSLY']
 ]
 
+tenant {
+	resolver.type = "springSecurity"
+}
+
 
 
 // set per-environment serverURL stem for creating absolute links

@@ -10,6 +10,7 @@ class SecUser {
 	boolean accountExpired
 	boolean accountLocked
 	boolean passwordExpired
+	Integer userTenantId
 
 	static constraints = {
 		username blank: false, unique: true

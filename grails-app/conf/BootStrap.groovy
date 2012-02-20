@@ -11,6 +11,7 @@ class BootStrap {
 		def adminUser = SecUser.findByUsername('admin') ?: new SecUser(
 			username: 'admin',
 			password: 'admin',
+			userTenantId: 0,
 			enabled: true).save(failOnError: true)
 
 		if (!adminUser.authorities.contains(adminRole)) {
@@ -20,6 +21,7 @@ class BootStrap {
 		def user = SecUser.findByUsername('salman') ?: new SecUser(
 			username: 'salman',
 			password: 'salman',
+			userTenantId: 1,
 			enabled: true).save(failOnError: true)
 
 		if (!user.authorities.contains(userRole)) {
